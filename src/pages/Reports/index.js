@@ -1,5 +1,11 @@
+import ReportsList from "../../components/ReportsList";
+
 const Reports = () => {
-    return 0
+    
+    return (
+        <ReportsList />
+    )
+
 }
 
 export default Reports;

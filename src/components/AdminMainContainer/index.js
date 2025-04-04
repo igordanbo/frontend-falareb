@@ -1,10 +1,10 @@
 import './AdminMainContainer.css';
-const AdminMainContainer = (props) => {
+const AdminMainContainer = ({children, isOpen, setIsOpen }) => {
 
     return (
-        <div className="admin-main-container">
+        <div className={`admin-main-container ${isOpen ? "sidebar-open" : "sidebar-closed"}`}>
             <div className="admin-main-content">
-                {props.children}
+                {children}
             </div>
         </div>
     )

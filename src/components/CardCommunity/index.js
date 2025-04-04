@@ -3,6 +3,8 @@ import './CardCommunity.css'
 const CardCommunity = () => {
 
     return (
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+        <a href="#">
         <div className="card-community">
             <div className="column_left">
                 <span className="card-community_title">Community Very Very Long Name</span>
@@ -28,6 +30,7 @@ const CardCommunity = () => {
                 </div>
             </div>
         </div>
+        </a>
     )
 
 }

@@ -13,17 +13,24 @@ top: 0px;
 z-index: 9999;
 
 background-color: white;
+
+transition: all 0.3s ease-in-out;
+}
+
+.closed{
+    left: -220px;
+    transition: all 0.3s ease-in-out;
 }
 
 .sidebar::after {
     content: "";
     position: absolute;
     top: 0;
-    right: 0; /* Fica na borda direita */
-    width: 1px; /* Ajuste conforme necessário */
+    right: 0; 
+    width: 1px; 
     height: 110%;
     background: linear-gradient(to bottom, black, white);
-    opacity: 0.1; /* Mantém o efeito sutil */
+    opacity: 0.1;
   }
 
 .list-title{

@@ -1,9 +1,7 @@
 .admin-header{
-/* Dashboard Header */
 
 box-sizing: border-box;
 
-/* Auto layout */
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -19,6 +17,13 @@ top: 0px;
 background-color: white;
 border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
 
+transition: all 0.3s ease-in-out;
+
+}
+
+.sidebar-closed{
+    left: 0px;  
+    transition: all 0.3s ease-in-out;
 }
 
 .right-area{
@@ -37,4 +42,11 @@ border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
     text-transform: capitalize;
     width: 110px;
     opacity: 40%;
+    position: relative;
+    margin-left: 20px;
+    top: 2px;
+}
+
+.toggle-btn{
+    opacity: 0.3;
 }
