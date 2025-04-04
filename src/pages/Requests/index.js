@@ -1,5 +1,9 @@
+import ModalDanger from "../../components/ModalDanger";
+
 const Requests = () => {
-    return 0
+    return (
+        <ModalDanger /> 
+    )
 }
 
 export default Requests;

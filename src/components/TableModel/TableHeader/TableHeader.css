@@ -1,0 +1,43 @@
+.table-header{
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    height: 50px;
+    background-color: #F9FAFB;
+    border: 1px solid #EAECF0;
+    border-radius: 50px 50px 0 0;
+}
+
+.header-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    position: relative;
+    top: 2px;
+}
+
+.header-name, .header-email, .header-address{
+    width: 27%;
+}
+
+.header-actions{
+    width: 6%;
+    margin-left: 1%;
+}
+
+.header-phone{
+    width: 12%;
+}
+
+.header-item svg{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -1px;
+    opacity: 0.4;
+}
+
+.header-actions{
+    justify-content: center;
+}

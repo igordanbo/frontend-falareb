@@ -1,0 +1,24 @@
+.gray-btn{
+    border: 2px solid #D0D5DD;
+    padding: 10px 15px;
+    border-radius: 40px;
+    cursor: pointer;
+
+    /* Text */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Gray/700 */
+    color: #344054;
+
+    transition: all 0.3s ease;
+}
+
+.gray-btn:hover{
+    opacity: 0.5;
+}

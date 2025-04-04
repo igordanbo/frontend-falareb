@@ -1,5 +1,9 @@
+import ModalAlert from "../../components/ModalAlert";
+
 const Users = () => {
-    return 0
+    return (
+        <ModalAlert/>
+    )
 }
 
 export default Users;

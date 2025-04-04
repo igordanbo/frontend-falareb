@@ -1,0 +1,19 @@
+.footer-header{
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    height: 70px;
+    background-color: #F9FAFB;
+    border: 1px solid #EAECF0;
+    border-radius: 0px 0px 50px 50px;
+    justify-content: space-between;
+}
+
+.footer-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-infos{
+    font-size: 14px;
+}

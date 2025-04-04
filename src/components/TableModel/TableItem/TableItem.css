@@ -1,0 +1,63 @@
+.table-item{
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    border: 1px solid #EAECF0;
+}
+
+.item-name,  .item-address, .item-email{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin-right: 2%;
+    word-break: break-all;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.item-phone{
+    width: 10%;
+    margin-right: 2%;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.item-actions{
+    width: 7%;
+}
+
+
+.item-actions{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    left: 10px;
+    color: gray;
+}
+
+.edit-btn, .delete-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: gray;
+    cursor: pointer;
+}
+
+.edit-btn svg, .delete-btn svg{
+    width: 18px;
+}
+
+.delete-btn:hover{
+    background-color: rgba(255, 0, 0, 0.13);
+    border-radius: 50%;
+}
+
+.edit-btn:hover{
+    background-color: rgba(255, 251, 0, 0.178);
+    border-radius: 50%;
+}
