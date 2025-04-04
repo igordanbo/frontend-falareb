@@ -1,0 +1,35 @@
+.grid-communities{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 16px; 
+    padding: 16px;
+}
+
+.grid-item {
+    background-color: #dbfbe2; /* Cor de fundo */
+    border: 2px solid #2e46ff; /* Borda */
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+@media (max-width: 999px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+    }
+}
+

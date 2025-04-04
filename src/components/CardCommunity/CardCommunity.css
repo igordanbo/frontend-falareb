@@ -1,0 +1,53 @@
+.card-community{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 30px;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.card-community .column_left{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.status_area{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status_dot1, .status_dot2, .status_dot3{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.card-community_title{
+    font-size: 14px;
+    height: 32px;
+    margin-top: -5px;
+}
+
+.card-community_number{
+    opacity: 0.5;
+    font-size: 40px;
+    font-weight: 400;
+    height: 40px;
+}
+
+.status_dot1{
+    background-color: #10B981;
+}
+
+.status_dot2{
+    background-color: #ffbe40;
+}
+
+.status_dot3{
+    background-color: #ff4040;
+}

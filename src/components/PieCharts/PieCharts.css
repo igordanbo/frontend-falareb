@@ -1,0 +1,42 @@
+.container-pies{
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+    
+}
+
+.container-pies .pie{
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+}
+
+.container-pies .pie svg{
+    position: relative;
+    left: -10px;
+}
+
+.title-pies{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.title-pies span {
+    color: black;
+    font-weight: 500;
+}
+
+.title-pies svg{
+    fill: rgba(0, 0, 0, 0.137);
+    margin-left: 10px;
+    margin-right: -10px;
+    
+}

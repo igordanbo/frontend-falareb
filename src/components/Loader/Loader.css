@@ -1,0 +1,32 @@
+.loader {
+    width: 100px;
+    position: absolute;
+    height: 5px;
+    background: #dddddd;
+    border-radius: 50px;
+    overflow: hidden;
+    right: 50px;
+    top: 10px;
+  }
+  
+  .inner_loader {
+    width: 60%;
+    height: 100%;
+    background: #02972f;
+    border-radius: 50px;
+    animation: moveLeftRight 2s ease-in-out infinite;
+  }
+  
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(calc(-100% + 10px));
+    }
+  
+    50% {
+      transform: translateX(calc(100px - 10px));
+    }
+  
+    100% {
+      transform: translateX(calc(-100% + 10px));
+    }
+  }

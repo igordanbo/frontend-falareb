@@ -1,0 +1,40 @@
+.admin-header{
+/* Dashboard Header */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 20px 28px;
+
+position: absolute;
+height: 68px;
+left: 220px;
+right: 0px;
+top: 0px;
+
+background-color: white;
+border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.right-area{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.logout{
+    opacity: 40%;
+    cursor: pointer;
+}
+
+.page-name{
+    text-transform: capitalize;
+    width: 110px;
+    opacity: 40%;
+}

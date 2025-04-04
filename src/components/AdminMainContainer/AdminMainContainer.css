@@ -1,0 +1,14 @@
+.admin-main-container{
+    position: relative;
+    top: 68px;
+    left: 220px;
+    width: calc(100% - 220px);
+    height: calc(100vh - 68px);
+
+}
+
+.admin-main-content{
+    width: 100%;
+    padding: 4%;
+}
+
