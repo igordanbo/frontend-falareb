@@ -8,7 +8,7 @@ const Loader = () => {
         // Simula uma requisição assíncrona (exemplo: busca de API)
         setTimeout(() => {
             setLoading(false);
-        }, 3000); // Simulando 2 segundos de carregamento
+        }, 3000); // Simulando 3 segundos de carregamento
     }, []);
 
     return (

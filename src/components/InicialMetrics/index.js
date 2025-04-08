@@ -1,99 +1,30 @@
 import './InicialMetrics.css';
-import { ArrowDropUp } from '@mui/icons-material';
-import { PriceCheck } from '@mui/icons-material';
+import Card from './Card';
 
 const InicialMetrics = () => {
 
     return (
         <div className="container-inicial-metrics">
-            <div class="card">
-                <div class="title">
-                    <span><PriceCheck /></span>
-                    <p class="title-text">
-                        Titulo
-                    </p>
-                    <p class="percent">
-                    <ArrowDropUp /> 99%
-                    </p>
-                </div>
-                <div class="data">
-                    <p>
-                        39,500 
-                    </p>
-                    
-                    <div class="range">
-                        <div class="fill">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title">
-                    <span><PriceCheck /></span>
-                    <p class="title-text">
-                        Titulo
-                    </p>
-                    <p class="percent">
-                    <ArrowDropUp /> 99%
-                    </p>
-                </div>
-                <div class="data">
-                    <p>
-                        39,500 
-                    </p>
-                    
-                    <div class="range">
-                        <div class="fill">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title">
-                    <span><PriceCheck /></span>
-                    <p class="title-text">
-                        Titulo
-                    </p>
-                    <p class="percent">
-                    <ArrowDropUp /> 99%
-                    </p>
-                </div>
-                <div class="data">
-                    <p>
-                        39,500 
-                    </p>
-                    
-                    <div class="range">
-                        <div class="fill">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title">
-                    <span><PriceCheck /></span>
-                    <p class="title-text">
-                        Titulo
-                    </p>
-                    <p class="percent">
-                    <ArrowDropUp /> 99%
-                    </p>
-                </div>
-                <div class="data">
-                    <p>
-                        39,500 
-                    </p>
-                    
-                    <div class="range">
-                        <div class="fill">
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-
-
-
+            <Card 
+                titleCard="Solicitações"
+                valueCard="5467"
+                percentCard="12%"    
+            />
+            <Card 
+                titleCard="Concluídas"
+                valueCard="2145"
+                percentCard="43%" 
+            />
+            <Card 
+                titleCard="Agendadas"
+                valueCard="948"
+                percentCard="22%" 
+            />
+            <Card 
+                titleCard="Em aberto"
+                valueCard="2309"
+                percentCard="59%" 
+            />
         </div>
     )
 

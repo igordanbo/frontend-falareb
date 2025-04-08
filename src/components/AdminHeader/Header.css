@@ -42,9 +42,9 @@ transition: all 0.3s ease-in-out;
     text-transform: capitalize;
     width: 110px;
     opacity: 40%;
+    font-size: 12px;
     position: relative;
     margin-left: 20px;
-    top: 2px;
 }
 
 .toggle-btn{

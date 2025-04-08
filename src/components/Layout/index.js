@@ -3,7 +3,7 @@ import { useState } from "react";
 import AdminHeader from "../AdminHeader";
 import SideBar from "../AdminSideBar";
 import AdminMainContainer from "../AdminMainContainer";
-
+import AdminFooter from "../AdminFooter";
 
 const Layout = () => {
 
@@ -16,6 +16,7 @@ const Layout = () => {
       <AdminMainContainer isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen}>
         <Outlet />
       </AdminMainContainer>
+
     </>
   );
 

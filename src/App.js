@@ -8,6 +8,9 @@ import Users from "./pages/Users";
 import Reports from "./pages/Reports";
 import Administration from "./pages/Administration";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
+import LayoutLogin from "./components/LayoutLogin";
+import 'leaflet/dist/leaflet.css';
 
 function App() {
 
@@ -15,16 +18,25 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/admin" element={<Layout />}>
             <Route index element={<Dashboard />} />
-            <Route path="/solicitacoes" element={<Requests />} />
-            <Route path="/comunidades" element={<Communities />} />
-            <Route path="/usuarios" element={<Users />} />
-            <Route path="/relatorios" element={<Reports />} />
-            <Route path="/administracao" element={<Administration />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/admin/solicitacoes" element={<Requests />} />
+            <Route path="/admin/comunidades" element={<Communities />} />
+            <Route path="/admin/usuarios" element={<Users />} />
+            <Route path="/admin/relatorios" element={<Reports />} />
+            <Route path="/admin/administracao" element={<Administration />} />
           </Route>
+          
+          <Route path="*" element={<NotFound />} />
+          
+          <Route path="/" element={<LayoutLogin />}>
+            <Route index element={<Login />} />
+          </Route>
+   
+        
         </Routes>
+          
+
       </Router>
     </div>
   );

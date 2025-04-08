@@ -1,0 +1,111 @@
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f3f7;
+  }
+  
+  .notfound-title {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .notfound-subtitle {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #666;
+  }
+
+
+.card-notfound {
+    width: fit-content;
+    background-color: #f2f3f7;
+    border-radius: 0.75em;
+    cursor: pointer;
+    transition: ease 0.2s;
+    box-shadow: 1em 1em 1em #d8dae0b1, -0.75em -0.75em 1em #ffffff;
+    border: 1.5px solid #f2f3f7;
+  }
+  
+  .card-notfound:hover {
+    background-color: #d3ddf1;
+    border: 1.5px solid #1677ff;
+  }
+  
+  .container-notfound {
+    margin-top: 1.25em;
+    margin-bottom: 1.375em;
+    margin-left: 1.375em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75em;
+  }
+  
+  .status-ind-notfound {
+    width: 0.625em;
+    height: 0.625em;
+    background-color: #ff0000;
+    margin: 0.375em 0;
+    border-radius: 0.5em;
+  }
+  
+  .text-wrap-notfound {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    color: #333;
+  }
+  
+  .time-notfound {
+    font-size: 0.875em;
+    color: #777;
+  }
+  
+  .text-link-notfound {
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .button-wrap-notfound {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+  }
+  
+  .secondary-cta-notfound {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .primary-cta-notfound {
+    font-size: 15px;
+    background-color: transparent;
+    font-weight: 600;
+    color: #1677ff;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+  }
+  
+
+  .button-wrap-notfound a:hover {
+    text-decoration: underline;
+  }
+  
+  .right-notfound {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875em;
+  }
+  
