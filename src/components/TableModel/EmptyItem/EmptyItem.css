@@ -1,0 +1,10 @@
+.empty-item{
+    width: 100%;
+    opacity: 30%;
+    font-size: 13px;
+    height: 42px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

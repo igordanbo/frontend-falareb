@@ -1,16 +1,27 @@
 import './TableHeader.css'
 import SouthIcon from '@mui/icons-material/South';
+import Search from '../../Search';
+import Filters from '../../Filters';
 
-const TableHeader = () => {
+const TableHeader = ({tableTitle, children}) => {
 
     return (
-        <div className="table-header">
-            <div className="header-item header-name">Nome <SouthIcon /></div>
-            <div className="header-item header-email">Email <SouthIcon /></div>
-            <div className="header-item header-phone">Telefone <SouthIcon /></div>
-            <div className="header-item header-address">Endereço <SouthIcon /></div>
-            <div className="header-item header-actions">Ações</div>
-        </div>
+        <>
+            <div>
+                <h2 className="table-title">{tableTitle}</h2>
+                <div className="table-filters">
+                    <Filters/>
+                    {children}
+                </div>
+            </div>
+            <div className="table-header">
+                <div className="header-item header-name">Nome <SouthIcon /></div>
+                <div className="header-item header-email">Email <SouthIcon /></div>
+                <div className="header-item header-phone">Telefone <SouthIcon /></div>
+                <div className="header-item header-address">Endereço <SouthIcon /></div>
+                <div className="header-item header-actions">Ações</div>
+            </div>
+        </>
     )
 
 }

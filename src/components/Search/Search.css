@@ -1,0 +1,29 @@
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #d9d9d9; /* cor da borda */
+    border-radius: 20px; /* bordas arredondadas */
+    padding: 10px;
+    height: 52px;
+    width: 100%;
+    max-width: 350px;
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+  }
+
+  .search-box svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    stroke: #6b7280; /* cor do ícone */
+  }
+
+  .search-box:focus-within {
+    box-shadow: 0 0 0 1px #cbd5e1;
+  }

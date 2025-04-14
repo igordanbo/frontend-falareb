@@ -1,20 +1,24 @@
 import ButtonGray from '../../ButtonGray'
 import './TableFooter.css'
 
-const TableFooter = () => {
+const TableFooter = ({actionOnClickNext, actionOnClickPrev, disabledNext, disabledPrev, currentPage, lastPage, dataLength, dataTotal}) => {
 
     return (
         <div className="footer-header">
             <div className="footer-buttons">
-                <ButtonGray>
+                <ButtonGray
+                    actionOnClick={actionOnClickPrev}
+                    disabled={disabledPrev}>
                     Anterior
                 </ButtonGray>
-                <ButtonGray>
+                <ButtonGray
+                    actionOnClick={actionOnClickNext}
+                    disabled={disabledNext}>
                     Próxima
                 </ButtonGray>
             </div>
-            <div className="footer-infos">Página 1 de 10</div>
-            <div className="footer-infos">Exibindo 10 de 210</div>
+            <div className="footer-infos">Página {currentPage} de {lastPage}</div>
+            <div className="footer-infos">Exibindo {dataLength} de {dataTotal}</div>
         </div>
     )
 

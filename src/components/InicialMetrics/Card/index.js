@@ -4,23 +4,23 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const Card = ({titleCard, percentCard, valueCard}) => {
     return (
-        <div class="card">
-            <div class="title">
+        <div className="card">
+            <div className="title">
                 <span><DataUsageIcon /></span>
-                <p class="title-text">
+                <p className="title-text">
                     {titleCard}
                 </p>
-                <p class="percent">
+                <p className="percent">
                 <TrendingUpIcon /> {percentCard}
                 </p>
             </div>
-            <div class="data">
+            <div className="data">
                 <p>
                     {valueCard}
                 </p>
                 
-                <div class="range">
-                    <div class="fill">
+                <div className="range">
+                    <div className="fill">
                     </div>
                 </div>
             </div>

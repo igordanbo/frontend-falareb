@@ -6,7 +6,7 @@
 
     /* Text */
 
-    font-family: 'Roboto';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -22,3 +22,8 @@
 .gray-btn:hover{
     opacity: 0.5;
 }
+
+.gray-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }

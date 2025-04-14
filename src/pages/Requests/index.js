@@ -62,7 +62,7 @@ const Reports = () => {
       {/* Só renderiza o mapa se tiver localização definida */}
       {mapCenter && (
         <div style={{ height: "400px", width: "100%", marginBottom: "1em" }}>
-          <MapContainer center={mapCenter} zoom={15} style={{ height: "100%", width: "100%" }}>
+          <MapContainer center={mapCenter} zoom={15} style={{ borderRadius: "30px", height: "100%", width: "100%" }}>
             <TileLayer
               attribution='&copy; OpenStreetMap'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

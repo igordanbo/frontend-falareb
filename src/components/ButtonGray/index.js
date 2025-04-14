@@ -1,9 +1,9 @@
 import './ButtonGray.css'
 
-const ButtonGray = ({children}) => {
+const ButtonGray = ({children, actionOnClick, disabled}) => {
 
     return (
-        <button className="gray-btn">
+        <button className="gray-btn" onClick={actionOnClick} disabled={disabled}>
             {children}
         </button>
     )

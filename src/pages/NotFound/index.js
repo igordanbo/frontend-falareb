@@ -10,7 +10,7 @@ const NotFound = () => {
                 </div>
                 <div className="right-notfound">
                 <div className="text-wrap-notfound">
-                    <p class="text-content-notfound">
+                    <p className="text-content-notfound">
                     <a className="text-link-notfound" href="/login">Ops...</a> não encontramos essa
                     página por aqui.
                     </p>
