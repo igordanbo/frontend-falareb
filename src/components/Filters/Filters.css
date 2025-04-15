@@ -78,17 +78,6 @@
     transition: box-shadow 0.3s ease;
   }
 
-  .status-indicator {
-    position: absolute;
-    right: 36px;
-    top: 26px;
-    transform: translateY(-50%);
-    width: 22px;
-    height: 7px;
-    background-color: #f97316; /* Laranja */
-    border-radius: 30px;
-  }
-
   .arrow-icon {
     position: absolute;
     right: 12px;

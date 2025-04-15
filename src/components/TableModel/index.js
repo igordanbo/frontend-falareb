@@ -5,57 +5,78 @@ import TableFooter from './TableFooter';
 import EmptyItem from './EmptyItem';
 import LoaderItem from './LoaderItem';
 import Search from '../Search';
+import CheckboxStatus from './CheckboxStatus';
+import Filters from '../Filters';
 
 import React, { useEffect, useState } from 'react';
 
 const TableModel = () => {
 
-  const [users, setUsers] = useState([]);
+  const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
+  
   const [search, setSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState([]);
   const [category, setCategory] = useState('');
-  const [status, setStatus] = useState('');
   const [date, setDate] = useState('');
-  const [sortBy, setSortBy] = useState('asc');
+  const [sortBy, setSortBy] = useState('data');
     
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/produtos?page=${currentPage}`)
+    setLoading(true);
+  
+    const params = new URLSearchParams();
+  
+    params.append('page', currentPage);
+    if (search) params.append('search', search);
+    if (category) params.append('category', category);
+    if (sortBy) params.append('order_by', sortBy);
+    if (statusFilter.length > 0) params.append('status', statusFilter.join(','));
+  
+    fetch(`http://127.0.0.1:8000/api/produtos?${params.toString()}`)
       .then(response => response.json())
       .then(data => {
-        setUsers(data.data || []);
-        setLastPage(data.last_page);
+        setProducts(data.data || []);
         setTotal(data.total);
+        setLastPage(data.last_page);
         setLoading(false);
-      }, [])
-      .catch(error => console.error('Erro ao buscar dados', error)
-    );
-  }, [currentPage]);
+      })
+      .catch(error => {
+        console.error('Erro ao buscar dados:', error);
+        setLoading(false);
+      });
+  
+  }, [currentPage, search, category, sortBy, statusFilter]);
+   
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+    setCurrentPage(1);
+  }
 
-  const usersFiltered = users
-    .filter(user => {
-      return(
-        user.description?.toLowerCase().includes(search.toLowerCase()) ||
-        user.address?.toLowerCase().includes(search.toLowerCase()) ||
-        user.user?.name.toLowerCase().includes(search.toLowerCase()) ||
-        user.user?.email.toLowerCase().includes(search.toLowerCase()) ||
-        user.user?.phone.toLowerCase().includes(search.toLowerCase())
-      )
-    })
-    .filter(user => 
-      category ? user.category === category : true
-    )
-    .sort((a, b) => {
-      if(sortBy === 'name'){
-        return a.name.localeCompare(b.name);
-      } else if(sortBy === 'data'){
-        return new Date(a.date) - new Date(b.date);
-      } else {
-        return 0;
-      }
-    })
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
+    setCurrentPage(1);
+  }
+
+  const handleCheckboxChange = (status) => {
+    setStatusFilter(prev =>
+      prev.includes(status)
+        ? prev.filter(s => s !== status) // desmarca
+        : [...prev, status]              // marca
+    );
+  };
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+    setCurrentPage(1);
+  }
+
+  const handleSortChange = (e) => {
+    setSortBy(e.target.value);
+    setCurrentPage(1);
+  };
 
 
     return (
@@ -64,25 +85,45 @@ const TableModel = () => {
             <TableHeader 
               tableTitle="Listagem de Solicitações"
             >
-              <Search
-                valueSearch={search}
-                actionOnChange={e => setSearch(e.target.value)}/>
-              </TableHeader>
+
+            <Filters 
+              valueSelect={category} 
+              onChangeSelect={handleCategoryChange}
+            />
+
+            <CheckboxStatus 
+              checkedConcluido={statusFilter.includes('Concluído')}
+              onChangeConcluido={() => handleCheckboxChange('Concluído')}
+
+              checkedAgendado={statusFilter.includes('Agendado')}
+              onChangeAgendado={() => handleCheckboxChange('Agendado')}
+
+              checkedEmEspera={statusFilter.includes('Em Espera')}
+              onChangeEmEspera={() => handleCheckboxChange('Em Espera')}
+            />
+  
+            <Search
+              valueSearch={search}
+              actionOnChange={handleSearchChange}
+            />
+                
+            </TableHeader>
 
           
-              {loading ? (
+            {loading ? (
                 <LoaderItem/>
-              ) : users.length === 0 ? (
+              ) : products.length === 0 ? (
                 <EmptyItem />
               ) : (
                 
-                usersFiltered.map(user => (
+                products.map(product => (
                   <TableItem
-                    key={user.id} 
-                    name={user.description}
-                    address={user.address}
-                    email={user.user?.email}
-                    phone={user.user?.phone}
+                    key={product.id} 
+                    status={product.status}
+                    name={product.description}
+                    address={product.address}
+                    email={product.user?.email}
+                    phone={product.user?.phone}
                   />
                 ))
               )}
@@ -94,9 +135,9 @@ const TableModel = () => {
               disabledPrev={currentPage === 1} 
               currentPage={currentPage} 
               lastPage={lastPage} 
-              dataLength={users.length} 
+              dataLength={products.length} 
               dataTotal={total}
-              />
+            />
           
 
         </div>

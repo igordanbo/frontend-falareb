@@ -7,7 +7,7 @@ import { useState } from "react";
 import ModalDanger from '../../ModalDanger';
 import ModalAlert from '../../ModalAlert';
 
-const TableItem = ({name, email, phone, address, onConfirmActionDanger, onConfirmActionAlert}) => {
+const TableItem = ({status, name, email, phone, address, onConfirmActionDanger, onConfirmActionAlert}) => {
 
     const [isModalDangerOpen, setIsModalDangerOpen] = useState(false);
     const [isModalAlertOpen, setIsModalAlertOpen] = useState(false);
@@ -15,6 +15,15 @@ const TableItem = ({name, email, phone, address, onConfirmActionDanger, onConfir
     return (
 
         <div className="table-item">
+            <div className="tag"
+                 style={{
+                    backgroundColor:
+                      status === 'Concluído' ? '#10B981' : // verde
+                      status === 'Em espera' ? '#FF4040' : // amarelo
+                      status === 'Agendado' ? '#FF8E0C' : // azul
+                      'transparent' // cor padrão se não for nenhum dos acima
+                  }}
+            ></div>
             <div className="item item-name">{name}</div>
             <div className="item item-email"><a href={`mailto:${email}`}>{email}</a></div>
             <div className="item item-phone"><a href={`https://wa.me/55${phone}`}>{phone}</a></div>

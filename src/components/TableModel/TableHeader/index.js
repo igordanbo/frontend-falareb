@@ -1,16 +1,14 @@
 import './TableHeader.css'
 import SouthIcon from '@mui/icons-material/South';
-import Search from '../../Search';
 import Filters from '../../Filters';
 
-const TableHeader = ({tableTitle, children}) => {
+const TableHeader = ({tableTitle, children, handleCheckboxChange, statusFilter}) => {
 
     return (
         <>
             <div>
                 <h2 className="table-title">{tableTitle}</h2>
                 <div className="table-filters">
-                    <Filters/>
                     {children}
                 </div>
             </div>

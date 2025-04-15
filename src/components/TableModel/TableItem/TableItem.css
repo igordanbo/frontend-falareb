@@ -3,6 +3,7 @@
     align-items: center;
     padding: 20px 40px;
     border: 1px solid #EAECF0;
+    position: relative;
 }
 
 .item-name,  .item-address, .item-email{
@@ -62,3 +63,11 @@
     border-radius: 50%;
 }
 
+
+.tag{
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 25px;
+    border-radius: 0 5px 5px 0;
+}
